@@ -28,15 +28,16 @@
     import axios, { AxiosRequestConfig } from 'axios'
     export default {
         data() {
-        return {
-            msg: 'Hello World!'
-        }
+            return {
+                msg: 'Hello World!',
+                async apireq() {
+                    const res: AxiosRequestConfig = await axios.get('https://github-trending-api.waningflow.com/repositories');
+                    console.log(res.data);
+                    return res;
+                    }
+                }
         },
-        async apireq() {
-            const res: AxiosRequestConfig = await axios.get('https://github-trending-api.waningflow.com/repositories');
-            console.log(res.data);
-            return res;
-        }
+
     }
 </script>
 
