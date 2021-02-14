@@ -1,21 +1,21 @@
 <template>
     <Page>
-        <ActionBar title="Welcome to NativeScript-Vue!" android:flat="true"/>
+        <ActionBar title="GitHub_Trending_App" android:flat="true"/>
         <TabView android:tabBackgroundColor="#53ba82"
                  android:tabTextColor="#c4ffdf"
                  android:selectedTabTextColor="#ffffff"
                  androidSelectedTabHighlightColor="#ffffff">
-            <TabViewItem title="Tab 1">
+            <TabViewItem title="Today">
                 <GridLayout columns="*" rows="*">
                     <Label class="message" :text="msg" col="0" row="0"/>
                 </GridLayout>
             </TabViewItem>
-            <TabViewItem title="Tab 2">
+            <TabViewItem title="Weekly">
                 <GridLayout columns="*" rows="*">
                     <Label class="message" text="Tab 2 Content" col="0" row="0"/>
                 </GridLayout>
             </TabViewItem>
-            <TabViewItem title="Tab 3">
+            <TabViewItem title="Monthly">
                 <GridLayout columns="*" rows="*">
                     <Label class="message" text="Tab 3 Content" col="0" row="0"/>
                 </GridLayout>
@@ -25,13 +25,19 @@
 </template>
 
 <script lang="ts">
-  export default {
-    data() {
-      return {
-        msg: 'Hello World!'
-      }
+    import axios, { AxiosRequestConfig } from 'axios'
+    export default {
+        data() {
+        return {
+            msg: 'Hello World!'
+        }
+        },
+        async apireq() {
+            const res: AxiosRequestConfig = await axios.get('https://github-trending-api.waningflow.com/repositories');
+            console.log(res.data);
+            return res;
+        }
     }
-  }
 </script>
 
 <style scoped>
