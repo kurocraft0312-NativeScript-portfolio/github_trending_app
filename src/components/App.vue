@@ -32,13 +32,13 @@
                 msg: 'Hello World!',
                 }
         },
-        // TODO:エラーになっているので調整する
-        async apireq(): Promise<AxiosRequestConfig> {
-                const res: AxiosRequestConfig = await axios.get('https://github-trending-api.waningflow.com/repositories');
-                console.log(res.data);
-                return res;
-            }
-
+        methods: {
+            async apireq(): Promise<AxiosRequestConfig> {
+                    const res: AxiosRequestConfig = await axios.get('https://github-trending-api.waningflow.com/repositories');
+                    console.log(res.data);
+                    return res;
+                }
+        }
     }
 </script>
 
