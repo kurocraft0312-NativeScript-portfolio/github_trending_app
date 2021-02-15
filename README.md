@@ -20,4 +20,7 @@ tns debug <platform>
 # Build for production
 tns build <platform> --env.production
 
+# bundle, Realtime check
+tns run android --bundle
+
 ```
