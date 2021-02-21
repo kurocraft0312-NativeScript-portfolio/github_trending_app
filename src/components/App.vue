@@ -12,7 +12,7 @@
             </TabViewItem>
             <TabViewItem title="Weekly">
                 <GridLayout columns="*" rows="*">
-                    <Label class="message" text="Tab 2 Content" col="0" row="0"/>
+                    <Label class="message" text="Tab 9 Content" col="0" row="0"/>
                 </GridLayout>
             </TabViewItem>
             <TabViewItem title="Monthly">
@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-    import axios, { AxiosRequestConfig } from 'axios'
+    import axios, { AxiosRequestConfig } from 'axios/dist/axios'
     export default {
         data() {
             return {
