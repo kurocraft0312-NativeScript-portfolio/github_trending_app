@@ -20,6 +20,12 @@ tns debug <platform>
 # Build for production
 tns build <platform> --env.production
 
+# search device
+tns device
+
+# run device
+tns run --device <立ち上げるアプリのハッシュ値>
+
 # bundle, Realtime check
 tns run android --bundle
 
