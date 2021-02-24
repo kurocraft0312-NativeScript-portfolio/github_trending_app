@@ -31,5 +31,10 @@
     "typescript": "^3.9.7",
     "vue": "^2.6.12",
     "vue-loader": "^15.9.3"
+  },
+  "scripts": {
+    "dev": "tns debug android",
+    "devan": "tns debug android --no-hmr",
+    "devin": "tns debug ios --no-hmr"
   }
 }
